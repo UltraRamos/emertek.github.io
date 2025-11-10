@@ -1,0 +1,134 @@
+/*
+==================================================
+  FULL D'ESTILS PERSONALITZAT PER A EMERTEK
+  PALETA DE COLORS:
+  - Primari/Text Fosc: #1C3B55 (Blau Marí Fosc)
+  - Accent/Acció: #009688 (Turquesa Fosc)
+  - Accent Clar/Detalls: #1DE9B6 (Verd Aqua Brillant)
+==================================================
+*/
+
+/* 1. ESTILS GLOBALS I TIPOGRAFIA */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1C3B55; /* Color de text principal */
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Negreta per als títols */
+    color: #1C3B55; /* Títols en Blau Marí Fosc */
+}
+
+/* 2. BARRA DE NAVEGACIÓ (HEADER) */
+
+.navbar-dark .navbar-brand {
+    color: #1DE9B6; /* Nom de la marca en el color accent */
+    font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    transition: color 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #1DE9B6; /* Resalt en el color accent clar */
+}
+
+/* 3. BOTONS PERSONALITZATS (Sobreescriu Bootstrap) */
+
+.btn-primary {
+    background-color: #009688; /* Turquesa Fosc */
+    border-color: #009688;
+    font-weight: 600;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #00796B; /* Turquesa Fosc més fosc en hover */
+    border-color: #00796B;
+}
+
+.btn-outline-secondary {
+    color: #1C3B55; /* Text Blau Fosc */
+    border-color: #1C3B55;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #1C3B55;
+    color: white;
+}
+
+
+/* 4. HERO SECTION (Pàgina principal) */
+
+.hero .display-3 {
+    /* El color ja està definit amb la classe .text-primary de Bootstrap
+       que hauríem de redefinir o fer servir una de nova si no volem el blau per defecte.
+       Deixem .text-primary amb el nostre color accent a través de variables o directament: */
+    color: #009688 !important; 
+}
+
+/* Ajusta l'altura mínima per assegurar que el contingut no es superposi a la barra fixa */
+.hero {
+    min-height: 90vh; 
+    padding-top: 6rem !important; /* Ajust per la barra fixa */
+}
+
+/* 5. TARGETES (SERVEIS/PORTFOLI) */
+
+.card-title {
+    color: #009688; /* Títols de targetes en Turquesa Fosc */
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecte lleuger en moure el ratolí */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* Icones de serveis i detalls */
+.text-info {
+    color: #009688 !important; /* Sobreescriu l'info de Bootstrap al nostre Turquesa Fosc */
+}
+
+.bg-info {
+    background-color: #009688 !important;
+}
+
+/* 6. PEU DE PÀGINA (FOOTER) */
+
+footer a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #1DE9B6; /* Enllaços en color accent clar */
+}
+
+/* Estils per a la secció de contacte i formularis */
+.form-control:focus {
+    border-color: #009688;
+    box-shadow: 0 0 0 0.25rem rgba(0, 150, 136, 0.25); /* Turquesa amb transparència */
+}
+
+.badge.bg-primary {
+    background-color: #009688 !important;
+}
+
+/* MEDIA QUERIES (Per a mòbils, si calen ajustos més detallats) */
+@media (max-width: 992px) {
+    .hero {
+        min-height: 70vh;
+        padding-top: 5rem !important;
+    }
+}
